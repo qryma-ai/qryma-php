@@ -13,5 +13,5 @@ class Version
     const DESCRIPTION = 'Qryma Search API PHP SDK';
     const AUTHOR = 'Qryma Team';
     const LICENSE = 'MIT';
-    const URL = 'https://github.com/qryma/qryma-php';
+    const URL = 'https://github.com/qryma-ai/qryma-php';
 }
