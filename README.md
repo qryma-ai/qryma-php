@@ -27,7 +27,7 @@ composer require qryma-ai/qryma-php
 ```php
 // To install: composer require qryma-ai/qryma-php
 require __DIR__ . '/vendor/autoload.php';
-
+use function Qryma\qryma;
 $client = qryma(['apiKey' => 'ak-********************']);
 
 $response = $client->search('artificial intelligence', ['lang' => 'en']);
@@ -41,7 +41,7 @@ print_r($response);
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
-
+use function Qryma\qryma;
 $client = qryma(['apiKey' => 'ak-********************']);
 
 $response = $client->search('python programming');
@@ -60,7 +60,7 @@ foreach ($results as $result) {
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
-
+use function Qryma\qryma;
 $client = qryma(['apiKey' => 'ak-********************']);
 
 $response = $client->search('machine learning tutorials', [
