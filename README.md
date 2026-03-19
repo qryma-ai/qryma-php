@@ -27,7 +27,9 @@ composer require qryma-ai/qryma-php
 ```php
 // To install: composer require qryma-ai/qryma-php
 require __DIR__ . '/vendor/autoload.php';
+
 use function Qryma\qryma;
+
 $client = qryma(['apiKey' => 'ak-********************']);
 
 $response = $client->search('artificial intelligence', ['lang' => 'en']);
@@ -41,7 +43,9 @@ print_r($response);
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
+
 use function Qryma\qryma;
+
 $client = qryma(['apiKey' => 'ak-********************']);
 
 $response = $client->search('python programming');
@@ -60,7 +64,9 @@ foreach ($results as $result) {
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
+
 use function Qryma\qryma;
+
 $client = qryma(['apiKey' => 'ak-********************']);
 
 $response = $client->search('machine learning tutorials', [
@@ -101,7 +107,9 @@ You can specify additional configuration options:
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
+
 use function Qryma\qryma;
+
 $client = qryma([
     'apiKey' => 'ak-********************',
     'baseUrl' => 'https://custom.qryma.com',
@@ -195,7 +203,9 @@ Then in your code:
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
+
 use function Qryma\qryma;
+
 $client = qryma(['apiKey' => getenv('QRYMA_API_KEY')]);
 ```
 
@@ -205,7 +215,9 @@ The SDK raises exceptions for API errors:
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
+
 use function Qryma\qryma;
+
 try {
     $client = qryma(['apiKey' => 'ak-********************']);
     $response = $client->search('test query');
