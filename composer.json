@@ -1,11 +1,11 @@
 {
-    "name": "qryma/qryma-php",
+    "name": "qryma-ai/qryma-php",
     "description": "Qryma Search API PHP SDK",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Qryma Team",
+            "name": "Qryma-ai",
             "email": "support@qryma.com"
         }
     ],
@@ -26,6 +26,5 @@
             "Qryma\\Tests\\": "tests/"
         }
     },
-    "minimum-stability": "stable",
     "prefer-stable": true
 }
