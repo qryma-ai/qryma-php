@@ -270,7 +270,7 @@ If you encounter any issues or have questions, please:
 
 ## Changelog
 
-### 0.1.0
+### 1.0.0
 - Basic search functionality
 - Simple `qryma()` factory function for easy initialization
 - Advanced search with SearchOptions
