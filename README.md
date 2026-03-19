@@ -101,13 +101,12 @@ You can specify additional configuration options:
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
-
+use function Qryma\qryma;
 $client = qryma([
     'apiKey' => 'ak-********************',
     'baseUrl' => 'https://custom.qryma.com',
     'timeout' => 60
 ]);
-
 $response = $client->search('test query');
 print_r($response);
 ```
@@ -196,7 +195,7 @@ Then in your code:
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
-
+use function Qryma\qryma;
 $client = qryma(['apiKey' => getenv('QRYMA_API_KEY')]);
 ```
 
@@ -206,7 +205,7 @@ The SDK raises exceptions for API errors:
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
-
+use function Qryma\qryma;
 try {
     $client = qryma(['apiKey' => 'ak-********************']);
     $response = $client->search('test query');
