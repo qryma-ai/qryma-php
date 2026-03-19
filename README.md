@@ -19,13 +19,13 @@ A PHP SDK for the Qryma Search API, providing a simple and intuitive interface f
 You can install the Qryma PHP SDK using Composer:
 
 ```bash
-composer require qryma/qryma-php
+composer require qryma-ai/qryma-php
 ```
 
 ## Quick Start
 
 ```php
-// To install: composer require qryma/qryma-php
+// To install: composer require qryma-ai/qryma-php
 require __DIR__ . '/vendor/autoload.php';
 
 $client = qryma(['apiKey' => 'ak-********************']);

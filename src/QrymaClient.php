@@ -184,7 +184,7 @@ class QrymaClient
  *
  * @example
  * ```php
- * // To install: composer require qryma/qryma-php
+ * // To install: composer require qryma-ai/qryma-php
  * $client = qryma(['apiKey' => 'ak-********************']);
  * $client->search('ces', ['lang' => 'zh-CN']);
  * ```
