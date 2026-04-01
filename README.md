@@ -73,7 +73,7 @@ $response = $client->search('machine learning tutorials', [
     'lang' => 'en',
     'start' => 0,
     'safe' => false,
-    'detail' => false
+    'mode' => 'snippet'
 ]);
 
 $results = $response['organic'] ?? [];
@@ -170,7 +170,7 @@ Perform a search with the given query and return the raw API response.
   - `lang`: Language code for search results (e.g., 'am' for Amharic, 'en' for English)
   - `start`: Starting position of results (default: 0)
   - `safe`: Safe search mode: true or false (default: false)
-  - `detail`: Include detailed results (default: false)
+  - `mode`: Result detail mode: 'snippet' for brief descriptions or 'fulltext' for detailed content (default: 'snippet')
 
 **Returns:**
 - Raw API response array containing the search results

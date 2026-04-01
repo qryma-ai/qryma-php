@@ -8,7 +8,7 @@ namespace Qryma;
 
 class Version
 {
-    const VERSION = '0.1.0';
+    const VERSION = '0.1.1';
     const TITLE = 'qryma-php';
     const DESCRIPTION = 'Qryma Search API PHP SDK';
     const AUTHOR = 'Qryma Team';

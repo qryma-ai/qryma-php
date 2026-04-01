@@ -17,7 +17,8 @@ class SearchOptions
     public $lang = '';
     public $start = 0;
     public $safe = false;
-    public $detail = false;
+    public $mode = 'snippet';
+    public $maxResults = 5;
 
     public function __construct(array $options = [])
     {
@@ -25,6 +26,19 @@ class SearchOptions
             if (property_exists($this, $key)) {
                 $this->$key = $value;
             }
+        }
+
+        // 验证 mode 值
+        if (!in_array($this->mode, ['snippet', 'fulltext'])) {
+            $this->mode = 'snippet';
+        }
+
+        // 验证 maxResults 值（1-10之间）
+        $this->maxResults = (int)$this->maxResults;
+        if ($this->maxResults < 1) {
+            $this->maxResults = 1;
+        } elseif ($this->maxResults > 10) {
+            $this->maxResults = 10;
         }
     }
 
@@ -34,7 +48,8 @@ class SearchOptions
             'lang' => $this->lang,
             'start' => $this->start,
             'safe' => $this->safe,
-            'detail' => $this->detail,
+            'mode' => $this->mode,
+            'max_results' => $this->maxResults,
         ];
     }
 }
