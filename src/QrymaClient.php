@@ -15,7 +15,6 @@ use GuzzleHttp\Exception\GuzzleException;
 class SearchOptions
 {
     public $lang = '';
-    public $start = 0;
     public $safe = false;
     public $mode = 'snippet';
     public $maxResults = 5;
@@ -46,7 +45,6 @@ class SearchOptions
     {
         return [
             'lang' => $this->lang,
-            'start' => $this->start,
             'safe' => $this->safe,
             'mode' => $this->mode,
             'max_results' => $this->maxResults,

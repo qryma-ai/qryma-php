@@ -71,9 +71,9 @@ $client = qryma(['apiKey' => 'ak-********************']);
 
 $response = $client->search('machine learning tutorials', [
     'lang' => 'en',
-    'start' => 0,
     'safe' => false,
-    'mode' => 'snippet'
+    'mode' => 'snippet',
+    'maxResults' => 5
 ]);
 
 $results = $response['organic'] ?? [];
@@ -132,7 +132,8 @@ The `search()` method returns the raw API response in the following format:
       "link" => "https://example.com",
       "position" => 1,
       "site_name" => "Example.com",
-      "snippet" => "Description text..."
+      "snippet" => "Description text...",
+      "text" => "Full text..."
     ]
   ]
 ]
@@ -145,6 +146,7 @@ The `search()` method returns the raw API response in the following format:
 - `position`: Position in the results list
 - `site_name`: Name of the website
 - `snippet`: Brief description or excerpt from the page
+- `text`: Full text of the page
 
 ## API Reference
 
@@ -168,7 +170,7 @@ Perform a search with the given query and return the raw API response.
 - `$query`: Search query string (required)
 - `$options`: Search options (optional)
   - `lang`: Language code for search results (e.g., 'am' for Amharic, 'en' for English)
-  - `start`: Starting position of results (default: 0)
+  - `maxResults`: Maximum number of results to return (default: 5, range: 1-10)
   - `safe`: Safe search mode: true or false (default: false)
   - `mode`: Result detail mode: 'snippet' for brief descriptions or 'fulltext' for detailed content (default: 'snippet')
 
